@@ -31,7 +31,7 @@ When this line is **removed**, the error handling works correctly and the typed 
    bun src/client.ts
    ```
    
-   **Result:** Client receives `RequestError: Transport error` instead of the expected `MyError`.
+   **Result:** Client receives `TimeoutException: Operation timed out after '5s'` instead of the expected `MyError`.
 
 2. **Without the bug:**
    - Comment out or remove line 31: `yield* Effect.sleep('1 second')`
@@ -61,7 +61,7 @@ The middleware should be able to:
 
 ## Actual Behavior
 
-When asynchronous operations are present in middleware, typed errors are not transmitted correctly, resulting in generic transport errors on the client side.
+When asynchronous operations are present in middleware, the operation times out (5s timeout) before the typed error can be properly transmitted, resulting in `TimeoutException` instead of the expected typed error.
 
 ---
 
