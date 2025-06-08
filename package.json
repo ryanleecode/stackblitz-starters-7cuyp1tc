@@ -1,0 +1,24 @@
+{
+  "name": "nodemon-starter",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node run.js"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20250525.0",
+    "@effect/language-service": "^0.19.0",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "@types/bun": "^1.2.15",
+    "dprint": "^0.50.0",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.19.1"
+  },
+  "dependencies": {
+    "@effect/platform": "^0.84.8",
+    "@effect/platform-bun": "^0.69.8",
+    "@effect/rpc": "^0.61.8",
+    "effect": "^3.16.4"
+  },
+  "packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
+}
